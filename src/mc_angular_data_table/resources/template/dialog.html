@@ -1,0 +1,75 @@
+<div mat-dialog-content>
+  <div class="flex flex-col">
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.assessment_progress_code"
+        placeholder="Code"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.assessment_progress_name"
+        placeholder="Name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.assessment_progress_display_priority"
+        placeholder="Priority"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.assessment_progress_status"
+        placeholder="Status"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.source_id"
+        disabled
+        placeholder="Source"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.who_created"
+        disabled
+        placeholder="Who created"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="item.when_created"
+        disabled
+        placeholder="When created"
+      />
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <div class="flex flex-row grow w-1/2 justify-center">
+    <button
+      mat-button
+      (click)="onCancel()"
+    >
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onUpdate()"
+      [mat-dialog-close]="item.when_created"
+      cdkFocusInitial
+    >
+      Update
+    </button>
+  </div>
+</div>
